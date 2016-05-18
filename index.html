@@ -19,9 +19,9 @@ var main = function () {
   var fov    = 10000;
   var aspect = width / height;
   var near   = 1;
-  var far    = 10000;
+  var far    = 6000;
   var camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
-  camera.position.set( 0, 0, 600 );
+  camera.position.set( 0, 0, 1300 );
  
   //レンダラーゾーン
 
@@ -32,9 +32,14 @@ var main = function () {
 
   //ライトゾーン
  
-  var directionalLight = new THREE.DirectionalLight( 0xffffff ,2);
+  var directionalLight = new THREE.DirectionalLight( 0xfaebd7 ,0.5);
   directionalLight.position.set( 0.577, -0.577, 0.577);
   scene.add( directionalLight );
+
+  var directionalLight = new THREE.DirectionalLight( 0xfaebd7 ,0.5);
+  directionalLight.position.set( -0.577, -0.577, 0.577);
+  scene.add( directionalLight );
+
 
   var ambient = new THREE.AmbientLight(0x333333);
   scene.add(ambient);
@@ -48,21 +53,103 @@ var main = function () {
  
   // for(var i=0,i<=8,i++){
 
-  var geometry = new THREE.SphereGeometry( 50 ,100 ,100 ,300);
+  // var geometry = new THREE.SphereGeometry( 50 ,100 ,100 ,300);
+
   // var texture = THREE.ImageUtils.loadTexture( 'images/flower-back0087.png' );
   // texture.anisotropy = renderer.getMaxAnisotropy();
-  var material = new THREE.MeshPhongMaterial( { color: 0xffffff,specular: 0xcccccc, shininess:0.3 , /*map:texture*/} );
+  // var material = new THREE.MeshPhongMaterial( { color: 0xffffff,specular: 0xcccccc, shininess:0.3 , /*map:texture*/} );
 
   // mesh.position.y = i*100;
-  var mesh = new THREE.Mesh( geometry, material);
-  scene.add( mesh );
+  // var mesh = new THREE.Mesh( geometry, material);
+  // scene.add( mesh );
 // }
+  var texture = THREE.ImageUtils.loadTexture( 'images/mokume.jpg' );
+  texture.anisotropy = renderer.getMaxAnisotropy();
 
+  var material = new THREE.MeshLambertMaterial( { color: 0x808080 } );
 
-  var materialA = new THREE.MeshLambertMaterial( { color: 0x808080} );
-  var meshA = new THREE.Mesh( new THREE.CylinderGeometry( width * 0.35, width * 0.35, 500, 1000, 0, false ), materialA );
-  meshA.position.y = 350;
+  var meshC = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  meshC.position.set(1050,350,-650);
+  meshC.scale.set(1.2,1,1);
+  meshC.rotation.x=180;
+  scene.add( meshC );
+
+  var meshD = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  meshD.position.set(750,350,-650);
+  meshD.scale.set(1.2,1,1);
+  meshD.rotation.x=180;
+  scene.add( meshD );
+
+  var meshE = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  meshE.position.set(450,350,-650);
+  meshE.scale.set(1.2,1,1);
+  meshE.rotation.x=180;
+  scene.add( meshE );
+
+  var meshF = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  meshF.position.set(150,350,-650);
+  meshF.scale.set(1.2,1,1);
+  meshF.rotation.x=180;
+  scene.add( meshF );
+
+  var meshG = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  meshG.position.set(-150,350,-650);
+  meshG.scale.set(1.2,1,1);
+  meshG.rotation.x=180;
+  scene.add( meshG );
+
+  var meshA = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  meshA.position.set(-450,350,-650);
+  meshA.scale.set(1.2,1,1);
+  meshA.rotation.x=180;
   scene.add( meshA );
+
+  var meshB = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  meshB.position.set(-750,350,-650);
+  meshB.scale.set(1.2,1,1);
+  meshB.rotation.x=180;
+  scene.add( meshB );
+
+  var meshC8 = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  meshC8.position.set(-1050,350,-650);
+  meshC8.scale.set(1.2,1,1);
+  meshC8.rotation.x=180;
+  scene.add( meshC8 );
+
+  
+
+  var mesh1 = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  mesh1.position.set(900,-200,-1200);
+  mesh1.scale.set(1.2,1,1);
+  mesh1.rotation.x=180;
+  scene.add( mesh1 );
+
+  var mesh2 = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  mesh2.position.set(600,-200,-1200);
+  mesh2.scale.set(1.2,1,1);
+  mesh2.rotation.x=180;
+  scene.add( mesh2);
+
+  var mesh3 = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  mesh3.position.set(0,-200,-1200);
+  mesh3.scale.set(1.2,1,1);
+  mesh3.rotation.x=180;
+  scene.add( mesh3 );
+
+  var mesh4 = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  mesh4.position.set(-300,-200,-1200);
+  mesh4.scale.set(1.2,1,1);
+  mesh4.rotation.x=180;
+  scene.add( mesh4 );
+
+  var mesh5 = new THREE.Mesh( new THREE.CylinderGeometry( 100, 100, 800, 1000, 0, false ), material);
+  mesh5.position.set(-600,-200,-1200);
+  mesh5.scale.set(1.2,1,1);
+  mesh5.rotation.x=180;
+  scene.add( mesh5 );
+
+
+  
 
   // 動くゾーン
  
