@@ -4,21 +4,20 @@ var main = function () {
   //カメラゾーン
  
   var width  = window.innerWidth*0.8;
-  var height = window.innerHeight*0.8;
+  var height = window.innerHeight*0.7;
   var fov    =　5000;
   var aspect = width / height;
   var near   = 1;
   var far    = 6000;
   var camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
   camera.position.set( 0, 500, 2000 );
-  camera.rotation.set( -0.3,0,0);
+  camera.rotation.set( -0.1,0,0);
  
   //レンダラーゾーン
-
+  // document.getElementById('piano').appendChild(renderer.domElement);
   var renderer = new THREE.WebGLRenderer();
   renderer.setSize( width, height );
-  document.body.appendChild( renderer.domElement );
-
+  document.getElementById('piano').appendChild(renderer.domElement);
 
   //ライトゾーン
  
@@ -34,69 +33,53 @@ var main = function () {
   var ambient = new THREE.AmbientLight(0x333333);
   scene.add(ambient);
 
-  // var directionalLight2 = new THREE.DirectionalLight( 0xffff00 ,3);
-  // directionalLight.position.set( 0, -1, 0.7 );
-  // scene.add( directionalLight2 );
-
-
-  //メッシュゾーン
- 
-  // for(var i=0,i<=8,i++){
-
-  // var geometry = new THREE.SphereGeometry( 50 ,100 ,100 ,300);
-
-  // var texture = THREE.ImageUtils.loadTexture( 'images/flower-back0087.png' );
-  // texture.anisotropy = renderer.getMaxAnisotropy();
-  // var material = new THREE.MeshPhongMaterial( { color: 0xffffff,specular: 0xcccccc, shininess:0.3 , /*map:texture*/} );
-
-  // mesh.position.y = i*100;
-  // var mesh = new THREE.Mesh( geometry, material);
-  // scene.add( mesh );
-// }
-
+  //マテリアル
   var texture = THREE.ImageUtils.loadTexture( 'images/mokume.jpg' );
   texture.anisotropy = renderer.getMaxAnisotropy();
 
   var material = new THREE.MeshLambertMaterial( { color: 0xffffff } );
   var material1 = new THREE.MeshLambertMaterial( { color: 0x696969 } );
 
-  var ballC = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
-  ballC.position.set(1050,-600,0);
-  scene.add(ballC);
 
-  var ballD = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
-  ballD.position.set(750,-600,0);
-  scene.add(ballD);
+  //メッシュ
 
+  // var ballC = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
+  // ballC.position.set(1050,110,-550);
+  // scene.add(ballC);
 
-  var ballE = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
-  ballE.position.set(450,-600,0);
-  scene.add(ballE);
+  // var ballD = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
+  // ballD.position.set(750,110,-550);
+  // scene.add(ballD);
 
 
-  var ballF = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
-  ballF.position.set(150,-600,0);
-  scene.add(ballF);
+  // var ballE = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
+  // ballE.position.set(450,110,-550);
+  // scene.add(ballE);
 
 
-  var ballG = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
-  ballG.position.set(-150,-600,0);
-  scene.add(ballG);
+  // var ballF = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
+  // ballF.position.set(150,110,-550);
+  // scene.add(ballF);
 
 
-  var ballA = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
-  ballA.position.set(-450,-600,0);
-  scene.add(ballA);
+  // var ballG = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
+  // ballG.position.set(-150,110,-550);
+  // scene.add(ballG);
 
 
-  var ballB = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
-  ballB.position.set(-750,-600,0);
-  scene.add(ballB);
+  // var ballA = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
+  // ballA.position.set(-450,110,-550);
+  // scene.add(ballA);
 
 
-  var ballC8 = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
-  ballC8.position.set(-1050,-600,0);
-  scene.add(ballC8);
+  // var ballB = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
+  // ballB.position.set(-750,110,-550);
+  // scene.add(ballB);
+
+
+  // var ballC8 = new THREE.Mesh( new THREE.SphereGeometry( 80 ,100 ,100 ,300),material);
+  // ballC8.position.set(-1050,110,-550);
+  // scene.add(ballC8);
 
 
 
@@ -182,15 +165,14 @@ var main = function () {
   scene.add( mesh5 );
 
 
-  
-
-  
-
   //レンダラー
 
   ( function() {
     renderer.render( scene, camera );
   } )();
+
+
+
 };
  
 window.addEventListener( 'DOMContentLoaded', main, false );
