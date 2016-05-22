@@ -3,7 +3,7 @@ var main = function () {
 
   //カメラゾーン
  
-  var width  = window.innerWidth*0.8;
+  var width  = window.innerWidth*0.7;
   var height = window.innerHeight*0.7;
   var fov    =　5000;
   var aspect = width / height;
@@ -11,7 +11,7 @@ var main = function () {
   var far    = 6000;
   var camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
   camera.position.set( 0, 500, 2000 );
-  camera.rotation.set( -0.1,0,0);
+  camera.rotation.set( -0.2,0,0);
  
   //レンダラーゾーン
   // document.getElementById('piano').appendChild(renderer.domElement);
@@ -176,3 +176,64 @@ var main = function () {
 };
  
 window.addEventListener( 'DOMContentLoaded', main, false );
+
+
+  
+
+  //id取得
+
+  //鍵盤とキーボードを連動
+
+var input_key_buffer = new Array();
+
+document.onkeydown = function (e){
+  if(!e) e = window.event; // レガシー
+  input_key_buffer[e.keyCode] = true;
+};
+
+document.onkeyup = function (e){
+  if(!e) e = window.event; // レガシー
+  input_key_buffer[e.keyCode] = false;
+};
+
+window.onblur = function (){
+  input_key_buffer.length = 0;
+};
+
+function KeyIsDown(key_code){
+  if(input_key_buffer[key_code])  return true;
+  return false;
+}
+
+setInterval(function (){
+
+  if(KeyIsDown(65)){
+    console.log("ど");
+    
+  }else if(KeyIsDown(83)){
+    console.log("れ");
+  }else if(KeyIsDown(68)){
+    console.log("み");
+  }else if(KeyIsDown(70)){
+    console.log("ふぁ");
+  }else if(KeyIsDown(74)){
+    console.log("そ");
+  }else if(KeyIsDown(75)){
+    console.log("ら");
+  }else if(KeyIsDown(76)){
+    console.log("し");
+  }else if(KeyIsDown(186)){
+    console.log("ど8");
+  }else if(KeyIsDown(87)){
+    console.log("ど＃");
+  }else if(KeyIsDown(69)){
+    console.log("れ＃");
+  }else if(KeyIsDown(84)){
+    console.log("ふぁ＃");
+  }else if(KeyIsDown(73)){
+    console.log("そ＃");
+  }else if(KeyIsDown(79)){
+    console.log("ら＃");
+  }
+
+},1000);

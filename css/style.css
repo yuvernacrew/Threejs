@@ -1,12 +1,12 @@
 body{
-	background-image: url('./images/cosmos.jpg');
+	/*background-image: url('../images/cosmos.jpg');*/
 	background-color: black;
 }
 
 
 header{
 	width:100%;
-	height:50px;
+	height:0px;
 }
 
 header h2{
@@ -24,7 +24,7 @@ main{
 }
 
 main #piano{
-	width:80%;
+	width:70%;
 	height: auto;
 	display:block;
 	margin:0 auto;
@@ -38,40 +38,55 @@ footer{
 
 .kenban{
 	position: relative;
-	width: 400px;
-	height: 60px;
+	width: 720px;
+	height: 100px;
 	margin: 0 auto;
+}
+
+.white-btn{
+	z-index: 5;
 }
 
 .black-btn1{
 	position: absolute;
 	background-color: black;
 	top:0px;
-	left:25px;
+	left:40px;
+	z-index:10;
 }
 
 .black-btn2{
 	position: absolute;
 	background-color: black;
 	top:0px;
-	left:175px;
+	left:315px;
+	z-index: 10;
 }
 
 .btn{
-	height: 150px;
-	width: 50px;
+	height: 200px;
+	width: 90px;
 	box-sizing: border-box;
 	border: 1px solid white;
 	float: left;
-	border-radius: 10px;
+}
+
+.btn:nth-child(1){
+	border-radius:10px 0px 0px 10px;
+}
+
+.btn:nth-child(8){
+	border-radius:0px 10px 10px 0px;
 }
 
 .btn2{
-	height: 75px;
-	width: 50px;
+	height: 120px;
+	width: 90px;
 	border: 1px solid white;
 	box-sizing: border-box;
 	float: left;
-	border-radius: 10px;
+	border-radius: 0px 0px 10px 10px;
 }
+
+
 
