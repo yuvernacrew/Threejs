@@ -34,8 +34,8 @@ var main = function () {
   scene.add(ambient);
 
   //マテリアル
-  var texture = THREE.ImageUtils.loadTexture( 'images/mokume.jpg' );
-  texture.anisotropy = renderer.getMaxAnisotropy();
+  // var texture = THREE.ImageUtils.loadTexture( 'images/mokume.jpg' );
+  // texture.anisotropy = renderer.getMaxAnisotropy();
 
   var material = new THREE.MeshLambertMaterial( { color: 0xffffff } );
   var material1 = new THREE.MeshLambertMaterial( { color: 0x696969 } );
@@ -209,7 +209,6 @@ setInterval(function (){
 
   if(KeyIsDown(65)){
     console.log("ど");
-    
   }else if(KeyIsDown(83)){
     console.log("れ");
   }else if(KeyIsDown(68)){
@@ -235,5 +234,4 @@ setInterval(function (){
   }else if(KeyIsDown(79)){
     console.log("ら＃");
   }
-
-},1000);
+},100000);
