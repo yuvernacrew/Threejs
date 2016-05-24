@@ -55,7 +55,7 @@ footer{
 	position: absolute;
 	background-color: black;
 	top:0px;
-	left:40px;
+	left:50px;
 	z-index:10;
 }
 
@@ -63,7 +63,7 @@ footer{
 	position: absolute;
 	background-color: black;
 	top:0px;
-	left:315px;
+	left:320px;
 	z-index: 10;
 }
 
@@ -76,24 +76,50 @@ footer{
 }
 
 .btn:nth-child(1){
-	border-radius:10px 0px 0px 10px;
+	border-radius:5px 0px 0px 5px;
 }
 
 .btn:nth-child(8){
-	border-radius:0px 10px 10px 0px;
+	border-radius:0px 5px 5px 0px;
 }
 
 .btn2{
 	height: 120px;
-	width: 90px;
+	width: 60px;
 	border: 1px solid white;
 	box-sizing: border-box;
 	float: left;
-	border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 5px 5px;
+	background-color: black;
 }
 
-.btn.pushed{
-	background-color: white;
-	opacity: 0.5;
+#Cs{
+	position: absolute;
+	left:10px;
 }
+
+#Ds{
+	position: absolute;
+	left:100px;
+}
+
+#Fs{
+	position: absolute;
+	left:10px;
+}
+
+#Gs{
+	position: absolute;
+	left:100px;
+}
+
+#As{
+	position: absolute;
+	left:190px;
+}
+
+.pushed{
+	background-color:#d3d3d3;
+}
+
 

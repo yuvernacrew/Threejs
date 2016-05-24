@@ -202,53 +202,123 @@ window.onblur = function (){
 
 function KeyIsDown(key_code){
   if(input_key_buffer[key_code])  return true;
-  return false;
+  // return false;
+}
+
+function KeyIsUp(key_code){
+  if(input_key_buffer[key_code]) return false;
+  // return true;
 }
 
 setInterval(function (){
 
+  var _c = document.getElementById("C");
+  var _d = document.getElementById("D");
+  var _e = document.getElementById("E");
+  var _f = document.getElementById("F");
+  var _g = document.getElementById("G");
+  var _a = document.getElementById("A");
+  var _b = document.getElementById("B");
+  var _c8 = document.getElementById("C8");
+
+  var _c2 = document.getElementById("Cs");
+  var _d2 = document.getElementById("Ds");
+  var _f2 = document.getElementById("Fs");
+  var _g2 = document.getElementById("Gs");
+  var _a2 = document.getElementById("As");
+
   if(KeyIsDown(65)){
-    console.log("ど");
-  }else if(KeyIsDown(83)){
-    console.log("れ");
-  }else if(KeyIsDown(68)){
-    console.log("み");
-  }else if(KeyIsDown(70)){
-    console.log("ふぁ");
-  }else if(KeyIsDown(74)){
-    console.log("そ");
-  }else if(KeyIsDown(75)){
-    console.log("ら");
-  }else if(KeyIsDown(76)){
-    console.log("し");
-  }else if(KeyIsDown(186)){
-    console.log("ど8");
-  }else if(KeyIsDown(87)){
-    console.log("ど＃");
-  }else if(KeyIsDown(69)){
-    console.log("れ＃");
-  }else if(KeyIsDown(84)){
-    console.log("ふぁ＃");
-  }else if(KeyIsDown(73)){
-    console.log("そ＃");
-  }else if(KeyIsDown(79)){
-    console.log("ら＃");
+     _c.classList.add('pushed');
+  }else{
+    _c.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(83)){
+    _d.classList.add('pushed');
+  }else{
+    _d.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(68)){
+   _e.classList.add('pushed');
+  }else{
+    _e.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(70)){
+    _f.classList.add('pushed');
+  }else{
+    _f.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(74)){
+    _g.classList.add('pushed');
+  }else{
+    _g.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(75)){
+    _a.classList.add('pushed');
+  }else{
+    _a.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(76)){
+    _b.classList.add('pushed');
+  }else{
+    _b.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(186)){
+    _c8.classList.add('pushed');
+  }else{
+    _c8.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(87)){
+    _c2.classList.add('pushed');
+  }else{
+    _c2.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(69)){
+    _d2.classList.add('pushed');
+  }else{
+    _d2.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(84)){
+    _f2.classList.add('pushed');
+  }else{
+    _f2.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(73)){
+    _g2.classList.add('pushed');
+  }else{
+    _g2.classList.remove('pushed');
+  }
+
+  if(KeyIsDown(79)){
+    _a2.classList.add('pushed');
+  }else{
+    _a2.classList.remove('pushed');
   }
 },1000/60);
-
-
 
 
 // DOM操作
 
 (function(){
   var _c = document.getElementById("C");
-  _c.addEventListener('onClick',function(){
-    console.log("ど");
-    // element.classList.add('pushed');
+
+    _c.addEventListener('onmousedown',function(){
+      console.log("wa");
+    _c.classList.add('pushed');
       });
-  _c.addEventListener('onmouseup',function(){
-    console.log("ど");
+    _c.addEventListener('onmouseup',function(){
+    _c.classList.remove('pushed');
       });
-});
+
+})();
 
