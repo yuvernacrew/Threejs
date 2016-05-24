@@ -234,4 +234,21 @@ setInterval(function (){
   }else if(KeyIsDown(79)){
     console.log("ら＃");
   }
-},100000);
+},1000/60);
+
+
+
+
+// DOM操作
+
+(function(){
+  var _c = document.getElementById("C");
+  _c.addEventListener('onClick',function(){
+    console.log("ど");
+    // element.classList.add('pushed');
+      });
+  _c.addEventListener('onmouseup',function(){
+    console.log("ど");
+      });
+});
+

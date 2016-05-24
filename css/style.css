@@ -2,6 +2,10 @@ body{
 	/*background-image: url('../images/cosmos.jpg');*/
 	background-color: black;
 }
+/*
+*{
+	box-sizing:border-box;
+}*/
 
 
 header{
@@ -88,5 +92,8 @@ footer{
 	border-radius: 0px 0px 10px 10px;
 }
 
-
+.btn.pushed{
+	background-color: white;
+	opacity: 0.5;
+}
 
