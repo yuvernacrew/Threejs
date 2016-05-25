@@ -3,8 +3,8 @@ var main = function () {
 
   //カメラゾーン
  
-  var width  = 880;
-  var height = 480;
+  var width  = window.innerWidth*0.7;
+  var height = window.innerHeight*0.7;
   var fov    =　5000;
   var aspect = width / height;
   var near   = 1;
@@ -39,65 +39,74 @@ var main = function () {
 
   var material = new THREE.MeshLambertMaterial( { color: 0xffffff } );
   var material1 = new THREE.MeshLambertMaterial( { color: 0x696969 } );
-  var mesh =  new THREE.CubeGeometry( 270, 1800, 170, 1000);
-  var mesh1 = new THREE.CubeGeometry( 190, 1200, 170, 1000);
 
 
-  var meshC = new THREE.Mesh( mesh ,material);
+  var meshC = new THREE.Mesh( new THREE.CubeGeometry( 270, 1800, 170, 1000), material);
+  meshC.position.set(1050,100,-950);
   meshC.rotation.x=180;
-  
-  var meshD = new THREE.Mesh( mesh ,material);
+  scene.add( meshC );
+
+  var meshD = new THREE.Mesh( new THREE.CubeGeometry( 270, 1800, 170, 1000), material);
+  meshD.position.set(750,100,-950);
   meshD.rotation.x=180;
+  scene.add( meshD );
 
-  var meshE = new THREE.Mesh( mesh ,material);
+  var meshE = new THREE.Mesh( new THREE.CubeGeometry( 270, 1800, 170, 1000) ,material);
+  meshE.position.set(450,100,-950);
   meshE.rotation.x=180;
+  scene.add( meshE );
 
-  var meshF = new THREE.Mesh( mesh, material);
+  var meshF = new THREE.Mesh( new THREE.CubeGeometry( 270, 1800, 170, 1000) ,material);
+  meshF.position.set(150,100,-950);
   meshF.rotation.x=180;
+  scene.add( meshF );
 
-  var meshG = new THREE.Mesh( mesh, material);
+  var meshG = new THREE.Mesh( new THREE.CubeGeometry( 270, 1800, 170, 1000) ,material);
+  meshG.position.set(-150,100,-950);
   meshG.rotation.x=180;
+  scene.add( meshG );
 
-  var meshA = new THREE.Mesh( mesh, material);
+  var meshA = new THREE.Mesh( new THREE.CubeGeometry( 270, 1800, 170, 1000) ,material);
+  meshA.position.set(-450,100,-950);
   meshA.rotation.x=180;
+  scene.add( meshA );
 
-  var meshB = new THREE.Mesh( mesh, material);
+  var meshB = new THREE.Mesh( new THREE.CubeGeometry( 270, 1800, 170, 1000), material);
+  meshB.position.set(-750,100,-950);
   meshB.rotation.x=180;
+  scene.add( meshB );
 
-  var meshC8 = new THREE.Mesh( mesh, material);
+  var meshC8 = new THREE.Mesh( new THREE.CubeGeometry( 270, 1800, 170, 1000), material);
+  meshC8.position.set(-1050,100,-950);
   meshC8.rotation.x=180;
+  scene.add( meshC8 );
 
   
 
-  var mesh1 = new THREE.Mesh( mesh1, material1);
+  var mesh1 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
+  mesh1.position.set(900,-150,-1000);
   mesh1.rotation.x=180;
   scene.add( mesh1 );
 
   var mesh2 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
-  mesh2.position.set(600,-100,-1000);
+  mesh2.position.set(600,-250,-1200);
   mesh2.rotation.x=180;
   scene.add( mesh2);
 
-  var mesh3 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000) ,material1);
-  mesh3.position.set(0,-100,-1000);
+  var mesh3 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1000, 170, 1000) ,material1);
+  mesh3.position.set(0,-250,-1200);
   mesh3.rotation.x=180;
   scene.add( mesh3 );
 
-  var mesh4 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000) ,material1);
-  mesh4.position.set(-300,-100,-1000);
+  var mesh4 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1000, 170, 1000) ,material1);
+  mesh4.position.set(-300,-250,-1200);
   mesh4.rotation.x=180;
   scene.add( mesh4 );
 
-  var mesh5 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
-  mesh5.position.set(-600,-100,-1000);
+  var mesh5 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1000, 170, 1000), material1);
+  mesh5.position.set(-600,-250,-1200);
   mesh5.rotation.x=180;
   scene.add( mesh5 );
-
-  function　render() {
-    renderer.render( scene, camera );
-  }
-
-  render();
 
 
   //鍵盤とキーボードを連動
@@ -149,180 +158,96 @@ setInterval(function (){
 
   if(KeyIsDown(65) || click(_c)){
      _c.classList.add('pushed');
-     meshC.position.set(1050,130,-1000);
-     scene.add( meshC );
-     render();
-
   }else{
     _c.classList.remove('pushed');
-    meshC.position.set(1050,100,-950);
-    scene.add( meshC );
-    render();
   }
 
   if(KeyIsDown(83)){
     _d.classList.add('pushed');
-    meshD.position.set(750,130,-1000);
-    scene.add( meshD );
-    render();
   }else{
     _d.classList.remove('pushed');
-    meshD.position.set(750,100,-950);
-    scene.add( meshD );
-    render();
   }
 
   if(KeyIsDown(68)){
-    _e.classList.add('pushed');
-    meshE.position.set(450,130,-1000);
-    scene.add( meshE );
-    render();
-
+   _e.classList.add('pushed');
   }else{
     _e.classList.remove('pushed');
-    meshE.position.set(450,100,-950);
-    scene.add( meshE );
-    render();
   }
 
   if(KeyIsDown(70)){
     _f.classList.add('pushed');
-    meshF.position.set(150,130,-1000);
-    scene.add( meshF );
-    render();
   }else{
     _f.classList.remove('pushed');
-    meshF.position.set(150,100,-950);
-    scene.add( meshF);
-    render();
   }
 
   if(KeyIsDown(74)){
     _g.classList.add('pushed');
-    meshG.position.set(-150,130,-1000);
-    scene.add( meshG );
-    render();
   }else{
     _g.classList.remove('pushed');
-    meshG.position.set(-150,100,-950);
-    scene.add( meshG);
-    render();
   }
 
   if(KeyIsDown(75)){
     _a.classList.add('pushed');
-    meshA.position.set(-450,130,-1000);
-    scene.add( meshA );
-    render();
   }else{
     _a.classList.remove('pushed');
-    meshA.position.set(-450,100,-950);
-    scene.add( meshA);
-    render();
   }
 
   if(KeyIsDown(76)){
     _b.classList.add('pushed');
-    meshB.position.set(-750,130,-1000);
-    scene.add( meshB );
-    render();
-
   }else{
     _b.classList.remove('pushed');
-    meshB.position.set(-750,100,-950);
-    scene.add( meshB);
-    render();
   }
 
   if(KeyIsDown(186)){
     _c8.classList.add('pushed');
-    meshC8.position.set(-1050,130,-1000);
-    scene.add( meshC8 );
-    render();
-
   }else{
     _c8.classList.remove('pushed');
-    meshC8.position.set(-1050,100,-950);
-    scene.add( meshC8);
-    render();
   }
-
-
 
   if(KeyIsDown(87)){
     _c2.classList.add('pushed');
-    mesh1.position.set(900,-70,-1050);
-    scene.add( mesh1);
-    render();
-
   }else{
     _c2.classList.remove('pushed');
-    mesh1.position.set(900,-100,-1000);
-    scene.add( mesh1);
-    render();
   }
 
   if(KeyIsDown(69)){
     _d2.classList.add('pushed');
-    mesh2.position.set(600,-70,-1050);
-    scene.add( mesh2);
-    render();
   }else{
     _d2.classList.remove('pushed');
-    mesh2.position.set(600,-100,-1000);
-    scene.add( mesh2);
-    render();
   }
 
   if(KeyIsDown(84)){
     _f2.classList.add('pushed');
-    mesh3.position.set(0,-70,-1050);
-    scene.add( mesh3);
-    render();
   }else{
     _f2.classList.remove('pushed');
-    mesh3.position.set(0,-100,-1000);
-    scene.add( mesh3);
-    render();
   }
 
   if(KeyIsDown(73)){
     _g2.classList.add('pushed');
-    mesh4.position.set(-300,-70,-1050);
-    scene.add( mesh4);
-    render();
   }else{
     _g2.classList.remove('pushed');
-    mesh4.position.set(-300,-100,-1000);
-    scene.add( mesh4);
-    render();
   }
 
   if(KeyIsDown(79)){
     _a2.classList.add('pushed');
-    mesh5.position.set(-600,-70,-1050);
-    scene.add( mesh5);
-    render();
-
   }else{
     _a2.classList.remove('pushed');
-    mesh5.position.set(-600,-100,-1000);
-    scene.add( mesh5);
-    render();
   }
-},1000/30);
+},1000/60);
 
-scene.add( meshC );
+
 
 // DOM操作
 function click(x){
     x.addEventListener('mousedown', function(){
       return true;
-  },false);
+  });
 }
 
 
-
+  ( function() {
+    renderer.render( scene, camera );
+  } )();
 
 
 
