@@ -1,6 +1,7 @@
 body{
 	/*background-image: url('../images/cosmos.jpg');*/
 	background-color: black;
+	font-family: 'Code Light';
 }
 /*
 *{
@@ -10,21 +11,64 @@ body{
 
 header{
 	width:100%;
-	height:0px;
+	height:80px;
+	position: absolute;
+	z-index: 10;
 }
 
-header h2{
+header h1{
 	color:white;
 	width:300px;
-	font-size:32px;
+	font-size:50px;
 	text-align: center;
 	line-height: 50px;
 	margin:0 auto;
+	margin-top: 15px;
 }
 
 main{
+	float: left;
 	width: 100%;
 	height: auto;
+	width:100;
+	position: relative;
+	z-index: 5;
+}
+
+.nav{
+	width: 100px;
+	height: 100%;
+	position: absolute;
+	left:5px;
+	z-index: 8;
+}
+
+.nav2{
+	width: 100px;
+	height: 100%;
+	position: absolute;
+	right:5px;
+	z-index: 8;
+}
+
+.nav-btn{
+	margin:0;
+	padding: 0;
+	width: 60px;
+	height: 60px;
+	margin-bottom: 25px;
+	margin-left:10px; 
+	border:1px solid white;
+	transform:rotate(45deg);
+	border-radius: 10px;
+}
+
+.nav .nav-btn:first-child{
+	margin-top:120px;
+}
+
+.nav2 .nav-btn:first-child{
+	margin-top:208px;
 }
 
 main canvas{
@@ -38,12 +82,13 @@ footer{
 	width:100%;
 	height:auto;
 	position: relative;
+	float: left;
 }
 
 .kenban{
 	position: relative;
 	width: 720px;
-	height: 100px;
+	height: auto;
 	margin: 0 auto;
 }
 
@@ -73,6 +118,10 @@ footer{
 	box-sizing: border-box;
 	border: 1px solid white;
 	float: left;
+	color:white;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 150px;
 }
 
 .btn:nth-child(1){
@@ -91,6 +140,10 @@ footer{
 	float: left;
 	border-radius: 0px 0px 10px 10px;
 	background-color: black;
+	color:white;
+	text-align: center;
+	padding-top:80px;
+	font-size:24px;
 }
 
 #Cs{
@@ -120,6 +173,7 @@ footer{
 
 .pushed{
 	background-color:#d3d3d3;
+	color:black;
 }
 
 

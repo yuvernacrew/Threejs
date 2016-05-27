@@ -69,35 +69,37 @@ var main = function () {
 
   
 
-  var mesh1 = new THREE.Mesh( mesh1, material1);
-  mesh1.rotation.x=180;
-  scene.add( mesh1 );
+  var meshCs = new THREE.Mesh( mesh1, material1);
+  meshCs.rotation.x=180;
+  scene.add( meshCs );
 
-  var mesh2 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
-  mesh2.position.set(600,-100,-1000);
-  mesh2.rotation.x=180;
-  scene.add( mesh2);
+  var meshDs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
+  meshDs.position.set(600,-100,-1000);
+  meshDs.rotation.x=180;
+  scene.add( meshDs);
 
-  var mesh3 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000) ,material1);
-  mesh3.position.set(0,-100,-1000);
-  mesh3.rotation.x=180;
-  scene.add( mesh3 );
+  var meshFs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000) ,material1);
+  meshFs.position.set(0,-100,-1000);
+  meshFs.rotation.x=180;
+  scene.add( meshFs );
 
-  var mesh4 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000) ,material1);
-  mesh4.position.set(-300,-100,-1000);
-  mesh4.rotation.x=180;
-  scene.add( mesh4 );
+  var meshGs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000) ,material1);
+  meshGs.position.set(-300,-100,-1000);
+  meshGs.rotation.x=180;
+  scene.add( meshGs );
 
-  var mesh5 = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
-  mesh5.position.set(-600,-100,-1000);
-  mesh5.rotation.x=180;
-  scene.add( mesh5 );
+  var meshAs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
+  meshAs.position.set(-600,-100,-1000);
+  meshAs.rotation.x=180;
+  scene.add( meshAs );
 
   function　render() {
     renderer.render( scene, camera );
   }
 
   render();
+
+
 
 
   //鍵盤とキーボードを連動
@@ -139,19 +141,35 @@ function KeyIsUp(key_code){
   var _b = document.getElementById("B");
   var _c8 = document.getElementById("C8");
 
-  var _c2 = document.getElementById("Cs");
-  var _d2 = document.getElementById("Ds");
-  var _f2 = document.getElementById("Fs");
-  var _g2 = document.getElementById("Gs");
-  var _a2 = document.getElementById("As");
+  var _cs = document.getElementById("Cs");
+  var _ds = document.getElementById("Ds");
+  var _fs = document.getElementById("Fs");
+  var _gs = document.getElementById("Gs");
+  var _as = document.getElementById("As");
+
+  var c = document.getElementById('C-music');
+  var d = document.getElementById('D-music');
+  var e = document.getElementById('E-music');
+  var f = document.getElementById('F-music');
+  var g = document.getElementById('G-music');
+  var a = document.getElementById('A-music');
+  var b = document.getElementById('B-music');
+  var c8 = document.getElementById('C8-music');
+
+  var cs = document.getElementById('Cs-music');
+  var ds = document.getElementById('Ds-music');
+  var fs = document.getElementById('Fs-music');
+  var gs = document.getElementById('Gs-music');
+  var as = document.getElementById('As-music');
 
 setInterval(function (){
 
-  if(KeyIsDown(65) || click(_c)){
-     _c.classList.add('pushed');
-     meshC.position.set(1050,130,-1000);
-     scene.add( meshC );
-     render();
+  if(KeyIsDown(65)){
+    _c.classList.add('pushed');
+    meshC.position.set(1050,130,-1000);
+    scene.add( meshC );
+    render();
+
 
   }else{
     _c.classList.remove('pushed');
@@ -197,7 +215,7 @@ setInterval(function (){
     render();
   }
 
-  if(KeyIsDown(74)){
+  if(KeyIsDown(71)){
     _g.classList.add('pushed');
     meshG.position.set(-150,130,-1000);
     scene.add( meshG );
@@ -209,7 +227,7 @@ setInterval(function (){
     render();
   }
 
-  if(KeyIsDown(75)){
+  if(KeyIsDown(72)){
     _a.classList.add('pushed');
     meshA.position.set(-450,130,-1000);
     scene.add( meshA );
@@ -221,7 +239,7 @@ setInterval(function (){
     render();
   }
 
-  if(KeyIsDown(76)){
+  if(KeyIsDown(74)){
     _b.classList.add('pushed');
     meshB.position.set(-750,130,-1000);
     scene.add( meshB );
@@ -234,7 +252,7 @@ setInterval(function (){
     render();
   }
 
-  if(KeyIsDown(186)){
+  if(KeyIsDown(75)){
     _c8.classList.add('pushed');
     meshC8.position.set(-1050,130,-1000);
     scene.add( meshC8 );
@@ -249,77 +267,74 @@ setInterval(function (){
 
 
 
+
+
   if(KeyIsDown(87)){
-    _c2.classList.add('pushed');
-    mesh1.position.set(900,-70,-1050);
-    scene.add( mesh1);
+    _cs.classList.add('pushed');
+    meshCs.position.set(900,-70,-1050);
+    scene.add( meshCs);
     render();
 
   }else{
-    _c2.classList.remove('pushed');
-    mesh1.position.set(900,-100,-1000);
-    scene.add( mesh1);
+    _cs.classList.remove('pushed');
+    meshCs.position.set(900,-100,-1000);
+    scene.add( meshCs);
     render();
   }
 
   if(KeyIsDown(69)){
-    _d2.classList.add('pushed');
-    mesh2.position.set(600,-70,-1050);
-    scene.add( mesh2);
+    _ds.classList.add('pushed');
+    meshDs.position.set(600,-70,-1050);
+    scene.add( meshDs);
     render();
   }else{
-    _d2.classList.remove('pushed');
-    mesh2.position.set(600,-100,-1000);
-    scene.add( mesh2);
+    _ds.classList.remove('pushed');
+    meshDs.position.set(600,-100,-1000);
+    scene.add( meshDs);
     render();
   }
 
   if(KeyIsDown(84)){
-    _f2.classList.add('pushed');
-    mesh3.position.set(0,-70,-1050);
-    scene.add( mesh3);
+    _fs.classList.add('pushed');
+    meshFs.position.set(0,-70,-1050);
+    scene.add( meshFs);
     render();
   }else{
-    _f2.classList.remove('pushed');
-    mesh3.position.set(0,-100,-1000);
-    scene.add( mesh3);
+    _fs.classList.remove('pushed');
+    meshFs.position.set(0,-100,-1000);
+    scene.add( meshFs);
     render();
   }
 
-  if(KeyIsDown(73)){
-    _g2.classList.add('pushed');
-    mesh4.position.set(-300,-70,-1050);
-    scene.add( mesh4);
+  if(KeyIsDown(89)){
+    _gs.classList.add('pushed');
+    meshGs.position.set(-300,-70,-1050);
+    scene.add( meshGs);
     render();
   }else{
-    _g2.classList.remove('pushed');
-    mesh4.position.set(-300,-100,-1000);
-    scene.add( mesh4);
+    _gs.classList.remove('pushed');
+    meshGs.position.set(-300,-100,-1000);
+    scene.add( meshGs);
     render();
   }
 
-  if(KeyIsDown(79)){
-    _a2.classList.add('pushed');
-    mesh5.position.set(-600,-70,-1050);
-    scene.add( mesh5);
+  if(KeyIsDown(85)){
+    _as.classList.add('pushed');
+    meshAs.position.set(-600,-70,-1050);
+    scene.add( meshAs);
     render();
 
   }else{
-    _a2.classList.remove('pushed');
-    mesh5.position.set(-600,-100,-1000);
-    scene.add( mesh5);
+    _as.classList.remove('pushed');
+    meshAs.position.set(-600,-100,-1000);
+    scene.add( meshAs);
     render();
   }
 },1000/30);
 
-scene.add( meshC );
 
-// DOM操作
-function click(x){
-    x.addEventListener('mousedown', function(){
-      return true;
-  },false);
-}
+
+
 
 
 

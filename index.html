@@ -5,44 +5,58 @@
       <title>実習</title>
       <link rel="stylesheet" type="text/css" href="css/reset.css">
       <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/clearfix.css">
       <script src="jsfile/three.min.js"></script>
 <!--       <script src="jsfile/piano.js"></script> -->
   </head>
   <body>
   <header class="header">
-    <h2>3D Marinba</h2>
+    <h1>PIANO</h1>
     <!-- <img class="logo" src="" alt="logo"> -->
   </header>
   <main>
     <div id="piano"></div>
   </main>
 
+  <nav class="nav">
+    <div class="nav-btn piano"></div>
+    <div class="nav-btn bass"></div>
+    <div class="nav-btn synthe"></div>
+    <div class="nav-btn chaos"></div>
+    <div class="nav-btn fun"></div>
+  </nav>
+
+  <nav class="nav2">
+    <div class="nav-btn mario"></div>
+    <div class="nav-btn pokemonn"></div>
+    <div class="nav-btn youkai"></div>
+  </nav>
+
   <footer>
-    <div class="kenban"> 
+    <div class="kenban clearfix"> 
       <div class="white-btn">
-        <div id="C" class="btn"></div>
-        <div id="D" class="btn"></div>
-        <div id="E" class="btn"></div>
-        <div id="F" class="btn"></div>
-        <div id="G" class="btn"></div>
-        <div id="A" class="btn"></div>
-        <div id="B" class="btn"></div>
-        <div id="C8" class="btn"></div>
+        <div id="C" class="btn">a</div>
+        <div id="D" class="btn">s</div>
+        <div id="E" class="btn">d</div>
+        <div id="F" class="btn">f</div>
+        <div id="G" class="btn">g</div>
+        <div id="A" class="btn">h</div>
+        <div id="B" class="btn">j</div>
+        <div id="C8" class="btn">k</div>
       </div>
 
       <div class="black-btn1">
-        <div id="Cs" class="btn2"></div>
-        <div id="Ds" class="btn2"></div>
+        <div id="Cs" class="btn2">w</div>
+        <div id="Ds" class="btn2">e</div>
       </div>
       <div class="black-btn2">
-        <div id="Fs" class="btn2"></div>
-        <div id="Gs" class="btn2"></div>
-        <div id="As" class="btn2"></div>
+        <div id="Fs" class="btn2">t</div>
+        <div id="Gs" class="btn2">y</div>
+        <div id="As" class="btn2">u</div>
       </div>
      </div>
    </footer>
 
-   <!--オーディオの埋め込み-->
   <script src="jsfile/piano.js"></script>
   </body>
 </html>
