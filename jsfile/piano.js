@@ -100,8 +100,6 @@ var main = function () {
   render();
 
 
-
-
   //鍵盤とキーボードを連動
 
 var input_key_buffer = new Array();
@@ -361,96 +359,6 @@ setInterval(function (){
     render();
   }
 },1000/30);
-
-
-
-//オーディオ 
-
-
-  // if(KeyIsDown(83)){
-
-  // }else{
-
-  // }
-
-  // if(KeyIsDown(68)){
-
-
-  // }else{
-
-  // }
-
-  // if(KeyIsDown(70)){
-
-  // }else{
-
-  // }
-
-  // if(KeyIsDown(71)){
-
-  // }else{
-
-  // }
-
-  // if(KeyIsDown(72)){
-
-
-  // }else{
-
-  // }
-
-  // if(KeyIsDown(74)){
-
-
-  // }else{
-
-  // }
-
-  // if(KeyIsDown(75)){
-
-
-  // }else{
-
-  // }
-
-
-
-
-
-  // if(KeyIsDown(87)){
-
-
-  // }else{
-
-  // }
-
-  // if(KeyIsDown(69)){
-
-  // }else{
-
-  // }
-
-  // if(KeyIsDown(84)){
-
-  // }else{
-
-  // }
-
-  // if(KeyIsDown(89)){
-
-
-  // }else{
-
-  // }
-
-  // if(KeyIsDown(85)){
-
-  // }else{
-
-// }
-
-
-
 
 
 
