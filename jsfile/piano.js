@@ -129,37 +129,83 @@ function KeyIsUp(key_code){
 }
 
 //id取得
+var btn_piano = document.getElementById("btn_piano");
+var btn_bass = document.getElementById("btn_bass");
+var btn_synthe = document.getElementById("btn_synthe");
+var btn_chaos = document.getElementById("btn_chaos");
+var btn_fun = document.getElementById("btn_fun");
+var btn_mario = document.getElementById("btn_mario");
+var btn_animal = document.getElementById("btn_animal");
+var btn_geino = document.getElementById("btn_geino");
 
+var sound = 'click_piano';
+
+console.log(btn_piano);
+
+btn_piano.addEventListener('click',function(){
+  sound = 'click_piano';
+  console.log(sound);
+});
+btn_bass.addEventListener('click',function(){
+  sound = 'click_bass';
+  console.log(sound);
+});
+btn_synthe.addEventListener('click',function(){
+  sound = 'click_synthe';
+  console.log(sound);
+});
+btn_chaos.addEventListener('click',function(){
+  sound = 'click_shaos';
+  console.log(sound);
+});
+btn_fun.addEventListener('click',function(){
+  sound = 'click_fun';
+  console.log(sound);
+});
+btn_mario.addEventListener('click',function(){
+  sound = 'click_mario';
+  console.log(sound);
+});
+btn_animal.addEventListener('click',function(){
+  sound = 'click_animal';
+  console.log(sound);
+});
+btn_geino.addEventListener('click',function(){
+  sound = 'click_geino';
+  console.log(sound);
+});
 
 //piano
-  var c_piano = new Audio('audio/piano/C.mp3');
-  var d_piano = new Audio('audio/piano/D.mp3');
-  var e_piano = new Audio('audio/piano/E.mp3');
-  var f_piano = new Audio('audio/piano/F.mp3');
-  var g_piano = new Audio('audio/piano/G.mp3');
-  var a_piano = new Audio('audio/piano/A.mp3');
-  var b_piano = new Audio('audio/piano/B.mp3');
-  var c8_piano = new Audio('audio/piano/C8.mp3');
-  var cs_piano = new Audio('audio/piano/Cs.mp3');
-  var ds_piano = new Audio('audio/piano/Ds.mp3');
-  var fs_piano = new Audio('audio/piano/Fs.mp3');
-  var gs_piano = new Audio('audio/piano/Gs.mp3');
-  var as_piano = new Audio('audio/piano/As.mp3');
+var c_piano = new Audio('audio/piano/C.mp3');
+var d_piano = new Audio('audio/piano/D.mp3');
+var e_piano = new Audio('audio/piano/E.mp3');
+var f_piano = new Audio('audio/piano/F.mp3');
+var g_piano = new Audio('audio/piano/G.mp3');
+var a_piano = new Audio('audio/piano/A.mp3');
+var b_piano = new Audio('audio/piano/B.mp3');
+var c8_piano = new Audio('audio/piano/C8.mp3');
+var cs_piano = new Audio('audio/piano/Cs.mp3');
+var ds_piano = new Audio('audio/piano/Ds.mp3');
+var fs_piano = new Audio('audio/piano/Fs.mp3');
+var gs_piano = new Audio('audio/piano/Gs.mp3');
+var as_piano = new Audio('audio/piano/As.mp3');
 
-  var _c = document.getElementById("C");
-  var _d = document.getElementById("D");
-  var _e = document.getElementById("E");
-  var _f = document.getElementById("F");
-  var _g = document.getElementById("G");
-  var _a = document.getElementById("A");
-  var _b = document.getElementById("B");
-  var _c8 = document.getElementById("C8");
+var _c = document.getElementById("C");
+var _d = document.getElementById("D");
+var _e = document.getElementById("E");
+var _f = document.getElementById("F");
+var _g = document.getElementById("G");
+var _a = document.getElementById("A");
+var _b = document.getElementById("B");
+var _c8 = document.getElementById("C8");
 
-  var _cs = document.getElementById("Cs");
-  var _ds = document.getElementById("Ds");
-  var _fs = document.getElementById("Fs");
-  var _gs = document.getElementById("Gs");
-  var _as = document.getElementById("As");
+var _cs = document.getElementById("Cs");
+var _ds = document.getElementById("Ds");
+var _fs = document.getElementById("Fs");
+var _gs = document.getElementById("Gs");
+var _as = document.getElementById("As");
+
+console.log(_c);
 
 
 
@@ -302,12 +348,15 @@ setInterval(function (){
     meshCs.position.set(900,-70,-1050);
     scene.add( meshCs);
     render();
+    cs_piano.play();
 
   }else{
     _cs.classList.remove('pushed');
     meshCs.position.set(900,-100,-1000);
     scene.add( meshCs);
     render();
+    cs_piano.pause();
+    cs_piano.currentTime = 0;
   }
 
   if(KeyIsDown(69)){
@@ -315,11 +364,14 @@ setInterval(function (){
     meshDs.position.set(600,-70,-1050);
     scene.add( meshDs);
     render();
+    ds_piano.play();
   }else{
     _ds.classList.remove('pushed');
     meshDs.position.set(600,-100,-1000);
     scene.add( meshDs);
     render();
+    ds_piano.pause();
+    ds_piano.currentTime = 0;
   }
 
   if(KeyIsDown(84)){
@@ -327,11 +379,14 @@ setInterval(function (){
     meshFs.position.set(0,-70,-1050);
     scene.add( meshFs);
     render();
+    fs_piano.play();
   }else{
     _fs.classList.remove('pushed');
     meshFs.position.set(0,-100,-1000);
     scene.add( meshFs);
     render();
+    fs_piano.pause();
+    fs_piano.currentTime = 0;
   }
 
   if(KeyIsDown(89)){
@@ -339,11 +394,14 @@ setInterval(function (){
     meshGs.position.set(-300,-70,-1050);
     scene.add( meshGs);
     render();
+    gs_piano.play();
   }else{
     _gs.classList.remove('pushed');
     meshGs.position.set(-300,-100,-1000);
     scene.add( meshGs);
     render();
+    gs_piano.pause();
+    gs_piano.currentTime = 0;
   }
 
   if(KeyIsDown(85)){
@@ -351,12 +409,15 @@ setInterval(function (){
     meshAs.position.set(-600,-70,-1050);
     scene.add( meshAs);
     render();
+    as_piano.play();
 
   }else{
     _as.classList.remove('pushed');
     meshAs.position.set(-600,-100,-1000);
     scene.add( meshAs);
     render();
+    as_piano.pause();
+    as_piano.currentTime = 0;
   }
 },1000/30);
 
