@@ -71,27 +71,27 @@ var main = function () {
 
   var meshCs = new THREE.Mesh( mesh1, material1);
   meshCs.rotation.x=180;
-  scene.add( meshCs );
+  // scene.add( meshCs );
 
   var meshDs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
   meshDs.position.set(600,-100,-1000);
   meshDs.rotation.x=180;
-  scene.add( meshDs);
+  // scene.add( meshDs);
 
   var meshFs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000) ,material1);
   meshFs.position.set(0,-100,-1000);
   meshFs.rotation.x=180;
-  scene.add( meshFs );
+  // scene.add( meshFs );
 
   var meshGs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000) ,material1);
   meshGs.position.set(-300,-100,-1000);
   meshGs.rotation.x=180;
-  scene.add( meshGs );
+  // scene.add( meshGs );
 
   var meshAs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
   meshAs.position.set(-600,-100,-1000);
   meshAs.rotation.x=180;
-  scene.add( meshAs );
+  // scene.add( meshAs );
 
   function　render() {
     renderer.render( scene, camera );
@@ -138,57 +138,180 @@ var btn_mario = document.getElementById("btn_mario");
 var btn_animal = document.getElementById("btn_animal");
 var btn_geino = document.getElementById("btn_geino");
 
-var sound = 'click_piano';
+var c,d,e,f,g,a,b,c8,cs,ds,fs,gs,as;
+  c = new Audio('audio/piano/C.mp3');
+  d = new Audio('audio/piano/D.mp3');
+  e = new Audio('audio/piano/E.mp3');
+  f = new Audio('audio/piano/F.mp3');
+  g = new Audio('audio/piano/G.mp3');
+  a = new Audio('audio/piano/A.mp3');
+  b = new Audio('audio/piano/B.mp3');
+  c8 = new Audio('audio/piano/C8.mp3');
+  cs = new Audio('audio/piano/Cs.mp3');
+  ds = new Audio('audio/piano/Ds.mp3');
+  fs = new Audio('audio/piano/Fs.mp3');
+  gs = new Audio('audio/piano/Gs.mp3');
+  as = new Audio('audio/piano/As.mp3');
 
-console.log(btn_piano);
+  btn_piano.classList.add('selected');
+
 
 btn_piano.addEventListener('click',function(){
-  sound = 'click_piano';
-  console.log(sound);
+  c = new Audio('audio/piano/C.mp3');
+  d = new Audio('audio/piano/D.mp3');
+  e = new Audio('audio/piano/E.mp3');
+  f = new Audio('audio/piano/F.mp3');
+  g = new Audio('audio/piano/G.mp3');
+  a = new Audio('audio/piano/A.mp3');
+  b = new Audio('audio/piano/B.mp3');
+  c8 = new Audio('audio/piano/C8.mp3');
+  cs = new Audio('audio/piano/Cs.mp3');
+  ds = new Audio('audio/piano/Ds.mp3');
+  fs = new Audio('audio/piano/Fs.mp3');
+  gs = new Audio('audio/piano/Gs.mp3');
+  as = new Audio('audio/piano/As.mp3');
 });
 btn_bass.addEventListener('click',function(){
-  sound = 'click_bass';
-  console.log(sound);
+    //bass
+  c= new Audio('audio/bass/c_bass.mp3');
+  d = new Audio('audio/bass/d_bass.mp3');
+  e = new Audio('audio/bass/e_bass.mp3');
+  f = new Audio('audio/bass/f_bass.mp3');
+  g = new Audio('audio/bass/g_bass.mp3');
+  a = new Audio('audio/bass/a_bass.mp3');
+  b = new Audio('audio/bass/b_bass.mp3');
+  c8 = new Audio('audio/bass/c8_bass.mp3');
+  cs = new Audio('audio/bass/cs_bass.mp3');
+  ds = new Audio('audio/bass/ds_bass.mp3');
+  fs = new Audio('audio/bass/fs_bass.mp3');
+  gs = new Audio('audio/bass/gs_bass.mp3');
+  as = new Audio('audio/bass/as_bass.mp3');
 });
 btn_synthe.addEventListener('click',function(){
-  sound = 'click_synthe';
-  console.log(sound);
+    //synthe
+  c = new Audio('audio/synthe/Serum_C.wav');
+  d = new Audio('audio/synthe/Serum_D.wav');
+  e = new Audio('audio/synthe/Serum_E.wav');
+  f = new Audio('audio/synthe/Serum_F.wav');
+  g = new Audio('audio/synthe/Serum_G.wav');
+  a = new Audio('audio/synthe/Serum_A.wav');
+  b = new Audio('audio/synthe/Serum_B.wav');
+  c8 = new Audio('audio/synthe/Serum_C8.wav');
+  cs = new Audio('audio/synthe/Serum_Cs.wav');
+  ds = new Audio('audio/synthe/Serum_Ds.wav');
+  fs = new Audio('audio/synthe/Serum_Fs.wav');
+  gs = new Audio('audio/synthe/Serum_Gs.wav');
+  as = new Audio('audio/synthe/Serum_As.wav');
+});
+btn_synthebass.addEventListener('click',function(){
+  //synthebass
+  c = new Audio('audio/synthebass/BASS_C.wav');
+  d = new Audio('audio/synthebass/BASS_D.wav');
+  e = new Audio('audio/synthebass/BASS_E.wav');
+  f = new Audio('audio/synthebass/BASS_F.wav');
+  g = new Audio('audio/synthebass/BASS_G.wav');
+  a = new Audio('audio/synthebass/BASS_A.wav');
+  b = new Audio('audio/synthebass/BASS_B.wav');
+  c8 = new Audio('audio/synthebass/BASS_C8.wav');
+  cs = new Audio('audio/synthebass/BASS_Cs.wav');
+  ds = new Audio('audio/synthebass/BASS_Ds.wav');
+  fs = new Audio('audio/synthebass/BASS_Fs.wav');
+  gs = new Audio('audio/synthebass/BASS_Gs.wav');
+  as = new Audio('audio/synthebass/BASS_As.wav');
+
 });
 btn_chaos.addEventListener('click',function(){
-  sound = 'click_shaos';
-  console.log(sound);
+  c = new Audio('audio/chaos/05 ARP_C.wav');
+  d = new Audio('audio/chaos/05 ARP_D.wav');
+  e = new Audio('audio/chaos/05 ARP_E.wav');
+  f = new Audio('audio/chaos/05 ARP_F.wav');
+  g = new Audio('audio/chaos/05 ARP_G.wav');
+  a = new Audio('audio/chaos/05 ARP_A.wav');
+  b = new Audio('audio/chaos/05 ARP_B.wav');
+  c8 = new Audio('audio/chaos/05 ARP_C8.wav');
+  cs = new Audio('audio/chaos/05 ARP_Cs.wav');
+  ds = new Audio('audio/chaos/05 ARP_Ds.wav');
+  fs = new Audio('audio/chaos/05 ARP_Fs.wav');
+  gs = new Audio('audio/chaos/05 ARP_Gs.wav');
+  as = new Audio('audio/chaos/05 ARP_As.wav');
 });
-btn_fun.addEventListener('click',function(){
-  sound = 'click_fun';
-  console.log(sound);
+btn_bell.addEventListener('click',function(){
+   //bell
+  c = new Audio('audio/bell/03 TRANCY BELL_C.wav');
+  d = new Audio('audio/bell/03 TRANCY BELL_D.wav');
+  e = new Audio('audio/bell/03 TRANCY BELL_E.wav');
+  f = new Audio('audio/bell/03 TRANCY BELL_F.wav');
+  g = new Audio('audio/bell/03 TRANCY BELL_G.wav');
+  a = new Audio('audio/bell/03 TRANCY BELL_A.wav');
+  b = new Audio('audio/bell/03 TRANCY BELL_B.wav');
+  c8 = new Audio('audio/bell/03 TRANCY BELL_C8.wav');
+  cs = new Audio('audio/bell/03 TRANCY BELL_Cs.wav');
+  ds = new Audio('audio/bell/03 TRANCY BELL_Ds.wav');
+  fs = new Audio('audio/bell/03 TRANCY BELL_Fs.wav');
+  gs = new Audio('audio/bell/03 TRANCY BELL_Gs.wav');
+  as = new Audio('audio/bell/03 TRANCY BELL_As.wav');
+});
+btn_drum.addEventListener('click',function(){
+  //drum
+  c = new Audio('audio/drum/Canopy - Kick 1.wav');
+  d = new Audio('audio/drum/Canopy - Kick 3.wav');
+  e = new Audio('audio/drum/Canopy - Kick 4.wav');
+  f = new Audio('audio/drum/Canopy - Kick 5.wav');
+  g = new Audio('audio/drum/Enzalla - Break CH 2.wav');
+  a = new Audio('audio/drum/Enzalla - Break CH 3.wav');
+  b = new Audio('audio/drum/Enzalla - Break CH 6.wav');
+  c8 = new Audio('audio/drum/Enzalla - Break OH 2.wav');
+  cs = new Audio('audio/drum/Enzalla - Break OH.wav');
+  ds = new Audio('audio/drum/SockChicken - Snare ring.wav');
+  fs = new Audio('audio/drum/Vikt0r-Kick8.wav');
+  gs = new Audio('audio/drum/Vikt0r-Perc1.wav');
+  as = new Audio('audio/drum/Vikt0r-Perc2.wav');
 });
 btn_mario.addEventListener('click',function(){
-  sound = 'click_mario';
-  console.log(sound);
+  c = new Audio('audio/mario/1up.wav');
+  d = new Audio('audio/mario/coin.mp3');
+  e = new Audio('audio/mario/fire.wav');
+  f = new Audio('audio/mario/fumu.mp3');
+  g = new Audio('audio/mario/jump.mp3');
+  a = new Audio('audio/mario/koura.wav');
+  b = new Audio('audio/mario/si.wav');
+  c8 = new Audio('audio/mario/sinka.wav');
+  cs = new Audio('audio/mario/syutsugenn.wav');
+  ds = new Audio('audio/mario/time.mp3');
+  fs = new Audio('audio/mario/tonnel.mp3');
+  gs = new Audio('audio/mario/utsu.mp3');
+  as = new Audio('audio/mario/coinblock.wav');
 });
 btn_animal.addEventListener('click',function(){
-  sound = 'click_animal';
-  console.log(sound);
+  c = new Audio('audio/animal/bora.mp3');
+  d = new Audio('audio/animal/cat.mp3');
+  e = new Audio('audio/animal/chicken-cry1.mp3');
+  f = new Audio('audio/animal/cow.mp3');
+  g = new Audio('audio/animal/crow.mp3');
+  a = new Audio('audio/animal/dog.mp3');
+  b = new Audio('audio/animal/goat.mp3');
+  c8 = new Audio('audio/animal/heron.mp3');
+  cs = new Audio('audio/animal/horornis.mp3');
+  ds = new Audio('audio/animal/mow.mp3');
+  fs = new Audio('audio/animal/piyo.mp3');
+  gs = new Audio('audio/animal/sea-lion2.mp3');
+  as = new Audio('audio/animal/sheep.mp3');
 });
-btn_geino.addEventListener('click',function(){
-  sound = 'click_geino';
-  console.log(sound);
+btn_dorakue.addEventListener('click',function(){
+  c = new Audio('audio/dorakue/hatena.wav');
+  d = new Audio('audio/dorakue/kaidan.wav');
+  e = new Audio('audio/dorakue/kiru.wav');
+  f = new Audio('audio/dorakue/kobusi.wav');
+  g = new Audio('audio/dorakue/kossetsu.wav');
+  a = new Audio('audio/dorakue/owari.mp3');
+  b = new Audio('audio/dorakue/revel.wav');
+  c8 = new Audio('audio/dorakue/sakuzyo.wav');
+  cs = new Audio('audio/dorakue/yado.mp3');
+  ds = new Audio('audio/dorakue/yasumu.mp3');
+  fs = new Audio('audio/dorakue/yokeru.wav');
+  gs = new Audio('audio/dorakue/zenmetsu.wav');
+  as = new Audio('audio/dorakue/zyumon.wav');
 });
-
-//piano
-var c_piano = new Audio('audio/piano/C.mp3');
-var d_piano = new Audio('audio/piano/D.mp3');
-var e_piano = new Audio('audio/piano/E.mp3');
-var f_piano = new Audio('audio/piano/F.mp3');
-var g_piano = new Audio('audio/piano/G.mp3');
-var a_piano = new Audio('audio/piano/A.mp3');
-var b_piano = new Audio('audio/piano/B.mp3');
-var c8_piano = new Audio('audio/piano/C8.mp3');
-var cs_piano = new Audio('audio/piano/Cs.mp3');
-var ds_piano = new Audio('audio/piano/Ds.mp3');
-var fs_piano = new Audio('audio/piano/Fs.mp3');
-var gs_piano = new Audio('audio/piano/Gs.mp3');
-var as_piano = new Audio('audio/piano/As.mp3');
 
 var _c = document.getElementById("C");
 var _d = document.getElementById("D");
@@ -214,212 +337,200 @@ setInterval(function (){
   if(KeyIsDown(65)){
     _c.classList.add('pushed');
     meshC.position.set(1050,130,-1000);
-    scene.add( meshC );
-    render();
-    c_piano.play();
+    c.play();
     
   }else{
     _c.classList.remove('pushed');
     meshC.position.set(1050,100,-950);
-    scene.add( meshC );
-    render();
-    c_piano.pause();
-    c_piano.currentTime = 0;
+    c.pause();
+    c.currentTime = 0;
   }
 
   if(KeyIsDown(83)){
     _d.classList.add('pushed');
     meshD.position.set(750,130,-1000);
-    scene.add( meshD );
-    render();
-    d_piano.play();
+    d.play();
   }else{
     _d.classList.remove('pushed');
     meshD.position.set(750,100,-950);
-    scene.add( meshD );
-    render();
-    d_piano.pause();
-    d_piano.currentTime = 0;
+    d.pause();
+    d.currentTime = 0;
   }
 
   if(KeyIsDown(68)){
     _e.classList.add('pushed');
     meshE.position.set(450,130,-1000);
-    scene.add( meshE );
-    render();
-    e_piano.play();
+    e.play();
   }else{
     _e.classList.remove('pushed');
     meshE.position.set(450,100,-950);
-    scene.add( meshE );
-    render();
-    e_piano.pause();
-    e_piano.currentTime = 0;
+    e.pause();
+    e.currentTime = 0;
   }
 
   if(KeyIsDown(70)){
     _f.classList.add('pushed');
     meshF.position.set(150,130,-1000);
-    scene.add( meshF );
-    render();
-    f_piano.play();
+    f.play();
   }else{
     _f.classList.remove('pushed');
     meshF.position.set(150,100,-950);
-    scene.add( meshF);
-    render();
-    f_piano.pause();
-    f_piano.currentTime = 0;
+    f.pause();
+    f.currentTime = 0;
   }
 
   if(KeyIsDown(71)){
     _g.classList.add('pushed');
     meshG.position.set(-150,130,-1000);
-    scene.add( meshG );
-    render();
-    g_piano.play();
+    g.play();
 
   }else{
     _g.classList.remove('pushed');
     meshG.position.set(-150,100,-950);
-    scene.add( meshG);
-    render();
-    g_piano.pause();
-    g_piano.currentTime = 0;
+    g.pause();
+    g.currentTime = 0;
   }
 
   if(KeyIsDown(72)){
     _a.classList.add('pushed');
     meshA.position.set(-450,130,-1000);
-    scene.add( meshA );
-    render();
-    a_piano.play();
+    a.play();
 
   }else{
     _a.classList.remove('pushed');
     meshA.position.set(-450,100,-950);
-    scene.add( meshA);
-    render();
-    a_piano.pause();
-    a_piano.currentTime = 0;
+    a.pause();
+    a.currentTime = 0;
 
   }
 
   if(KeyIsDown(74)){
     _b.classList.add('pushed');
     meshB.position.set(-750,130,-1000);
-    scene.add( meshB );
-    render();
-    b_piano.play();
+    b.play();
 
 
   }else{
     _b.classList.remove('pushed');
     meshB.position.set(-750,100,-950);
-    scene.add( meshB);
-    render();
-    b_piano.pause();
-    b_piano.currentTime = 0;
+    b.pause();
+    b.currentTime = 0;
 
   }
 
   if(KeyIsDown(75)){
     _c8.classList.add('pushed');
     meshC8.position.set(-1050,130,-1000);
-    scene.add( meshC8 );
-    render();
-    c8_piano.play();
+    c8.play();
 
   }else{
     _c8.classList.remove('pushed');
     meshC8.position.set(-1050,100,-950);
-    scene.add( meshC8);
-    render();
-    c8_piano.pause();
-    c8_piano.currentTime = 0;
+    c8.pause();
+    c8.currentTime = 0;
   }
-
-
 
 
 
   if(KeyIsDown(87)){
     _cs.classList.add('pushed');
     meshCs.position.set(900,-70,-1050);
-    scene.add( meshCs);
-    render();
-    cs_piano.play();
+    cs.play();
 
   }else{
     _cs.classList.remove('pushed');
     meshCs.position.set(900,-100,-1000);
-    scene.add( meshCs);
-    render();
-    cs_piano.pause();
-    cs_piano.currentTime = 0;
+    cs.pause();
+    cs.currentTime = 0;
   }
 
   if(KeyIsDown(69)){
     _ds.classList.add('pushed');
     meshDs.position.set(600,-70,-1050);
-    scene.add( meshDs);
-    render();
-    ds_piano.play();
+    ds.play();
   }else{
     _ds.classList.remove('pushed');
     meshDs.position.set(600,-100,-1000);
-    scene.add( meshDs);
-    render();
-    ds_piano.pause();
-    ds_piano.currentTime = 0;
+    ds.pause();
+    ds.currentTime = 0;
   }
 
   if(KeyIsDown(84)){
     _fs.classList.add('pushed');
     meshFs.position.set(0,-70,-1050);
-    scene.add( meshFs);
-    render();
-    fs_piano.play();
+    fs.play();
   }else{
     _fs.classList.remove('pushed');
     meshFs.position.set(0,-100,-1000);
-    scene.add( meshFs);
-    render();
-    fs_piano.pause();
-    fs_piano.currentTime = 0;
+    fs.pause();
+    fs.currentTime = 0;
   }
 
   if(KeyIsDown(89)){
     _gs.classList.add('pushed');
     meshGs.position.set(-300,-70,-1050);
-    scene.add( meshGs);
-    render();
-    gs_piano.play();
+    gs.play();
   }else{
     _gs.classList.remove('pushed');
     meshGs.position.set(-300,-100,-1000);
-    scene.add( meshGs);
-    render();
-    gs_piano.pause();
-    gs_piano.currentTime = 0;
+   scene.add(meshGs);
+   render();
+    gs.pause();
+    gs.currentTime = 0;
   }
 
   if(KeyIsDown(85)){
     _as.classList.add('pushed');
     meshAs.position.set(-600,-70,-1050);
-    scene.add( meshAs);
-    render();
-    as_piano.play();
+    as.play();
 
   }else{
     _as.classList.remove('pushed');
     meshAs.position.set(-600,-100,-1000);
-    scene.add( meshAs);
-    render();
-    as_piano.pause();
-    as_piano.currentTime = 0;
+    as.pause();
+    as.currentTime = 0;
   }
-},1000/30);
+},1000/60);
+
+scene.add( meshC );
+render();
+
+scene.add( meshD );
+render();
+
+scene.add( meshE );
+render();
+
+scene.add( meshF );
+render();
+
+scene.add( meshG );
+render();
+
+scene.add( meshA );
+render();
+
+scene.add( meshB );
+render();
+
+scene.add( meshC8 );
+render();
+
+scene.add( meshCs );
+render();
+
+scene.add( meshDs );
+render();
+
+scene.add( meshFs );
+render();
+
+scene.add( meshGs);
+render();
+
+scene.add( meshAs );
+render();
+
 
 
 

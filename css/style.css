@@ -68,7 +68,19 @@ main{
 }
 
 .nav2 .nav-btn:first-child{
-	margin-top:208px;
+	margin-top:120px;
+}
+
+.nav-btn img{
+	transform:rotate(-45deg);
+	width: 50px;
+	height:50px;
+	margin-top: 5px;
+	margin-left:5px;
+}
+
+.nav-btn:hover{
+	background-color: #808080;
 }
 
 main canvas{
@@ -174,6 +186,10 @@ footer{
 .pushed{
 	background-color:#d3d3d3;
 	color:black;
+}
+
+.selected{
+	background-color:white;
 }
 
 
