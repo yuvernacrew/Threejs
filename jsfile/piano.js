@@ -37,58 +37,67 @@ var main = function () {
   // var texture = THREE.ImageUtils.loadTexture( 'images/mokume.jpg' );
   // texture.anisotropy = renderer.getMaxAnisotropy();
 
-  var material = new THREE.MeshLambertMaterial( { color: 0xffffff } );
-  var material1 = new THREE.MeshLambertMaterial( { color: 0x696969 } );
-  var mesh =  new THREE.CubeGeometry( 270, 1800, 170, 1000);
-  var mesh1 = new THREE.CubeGeometry( 190, 1200, 170, 1000);
+  var material = new THREE.MeshLambertMaterial( { color: 0xffffff } ); // 白鍵盤マテリアル
+  var material1 = new THREE.MeshLambertMaterial( { color: 0x696969 } ); // 黒鍵盤マテリアル
+  var mesh =  new THREE.CubeGeometry( 270, 1800, 170, 1000); // 白鍵盤立方体作成
+  var mesh1 = new THREE.CubeGeometry( 190, 1200, 170, 1000); // 黒鍵盤立方体作成
 
 
   var meshC = new THREE.Mesh( mesh ,material);
+  meshC.position.set(1050,100,-950);
   meshC.rotation.x=180;
   
   var meshD = new THREE.Mesh( mesh ,material);
+  meshD.position.set(750,100,-950);
   meshD.rotation.x=180;
 
   var meshE = new THREE.Mesh( mesh ,material);
+  meshE.position.set(450,100,-950);
   meshE.rotation.x=180;
 
   var meshF = new THREE.Mesh( mesh, material);
+  meshF.position.set(150,100,-950);
   meshF.rotation.x=180;
 
   var meshG = new THREE.Mesh( mesh, material);
+  meshG.position.set(-150,100,-950);
   meshG.rotation.x=180;
 
   var meshA = new THREE.Mesh( mesh, material);
+  meshA.position.set(-450,100,-950);
   meshA.rotation.x=180;
 
   var meshB = new THREE.Mesh( mesh, material);
+  meshB.position.set(-750,100,-950);
   meshB.rotation.x=180;
 
   var meshC8 = new THREE.Mesh( mesh, material);
+  meshC8.position.set(-1050,100,-950);
   meshC8.rotation.x=180;
 
   
 
   var meshCs = new THREE.Mesh( mesh1, material1);
+  meshCs.position.set(900,-100,-1000);
   meshCs.rotation.x=180;
   // scene.add( meshCs );
 
-  var meshDs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
+  var meshDs = new THREE.Mesh( mesh1, material1);
   meshDs.position.set(600,-100,-1000);
   meshDs.rotation.x=180;
   // scene.add( meshDs);
 
-  var meshFs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000) ,material1);
+  var meshFs = new THREE.Mesh( mesh1, material1);
   meshFs.position.set(0,-100,-1000);
   meshFs.rotation.x=180;
   // scene.add( meshFs );
 
-  var meshGs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000) ,material1);
+  var meshGs = new THREE.Mesh( mesh1, material1);
   meshGs.position.set(-300,-100,-1000);
   meshGs.rotation.x=180;
   // scene.add( meshGs );
 
-  var meshAs = new THREE.Mesh( new THREE.CubeGeometry( 190, 1200, 170, 1000), material1);
+  var meshAs = new THREE.Mesh( mesh1, material1);
   meshAs.position.set(-600,-100,-1000);
   meshAs.rotation.x=180;
   // scene.add( meshAs );
@@ -333,15 +342,13 @@ console.log(_c);
 
 
 setInterval(function (){
-
   if(KeyIsDown(65)){
     _c.classList.add('pushed');
     meshC.position.set(1050,130,-1000);
     c.play();
-    
   }else{
     _c.classList.remove('pushed');
-    meshC.position.set(1050,100,-950);
+    meshC.position.set(1050,100,-950)
     c.pause();
     c.currentTime = 0;
   }
@@ -383,7 +390,6 @@ setInterval(function (){
     _g.classList.add('pushed');
     meshG.position.set(-150,130,-1000);
     g.play();
-
   }else{
     _g.classList.remove('pushed');
     meshG.position.set(-150,100,-950);
@@ -395,7 +401,6 @@ setInterval(function (){
     _a.classList.add('pushed');
     meshA.position.set(-450,130,-1000);
     a.play();
-
   }else{
     _a.classList.remove('pushed');
     meshA.position.set(-450,100,-950);
@@ -408,8 +413,6 @@ setInterval(function (){
     _b.classList.add('pushed');
     meshB.position.set(-750,130,-1000);
     b.play();
-
-
   }else{
     _b.classList.remove('pushed');
     meshB.position.set(-750,100,-950);
@@ -422,7 +425,6 @@ setInterval(function (){
     _c8.classList.add('pushed');
     meshC8.position.set(-1050,130,-1000);
     c8.play();
-
   }else{
     _c8.classList.remove('pushed');
     meshC8.position.set(-1050,100,-950);
@@ -430,13 +432,10 @@ setInterval(function (){
     c8.currentTime = 0;
   }
 
-
-
   if(KeyIsDown(87)){
     _cs.classList.add('pushed');
     meshCs.position.set(900,-70,-1050);
     cs.play();
-
   }else{
     _cs.classList.remove('pushed');
     meshCs.position.set(900,-100,-1000);
@@ -473,8 +472,6 @@ setInterval(function (){
   }else{
     _gs.classList.remove('pushed');
     meshGs.position.set(-300,-100,-1000);
-   scene.add(meshGs);
-   render();
     gs.pause();
     gs.currentTime = 0;
   }
@@ -483,59 +480,28 @@ setInterval(function (){
     _as.classList.add('pushed');
     meshAs.position.set(-600,-70,-1050);
     as.play();
-
   }else{
     _as.classList.remove('pushed');
     meshAs.position.set(-600,-100,-1000);
     as.pause();
     as.currentTime = 0;
   }
+
+  scene.add( meshC );
+  scene.add( meshD );
+  scene.add( meshE );
+  scene.add( meshF );
+  scene.add( meshG );
+  scene.add( meshA );
+  scene.add( meshB );
+  scene.add( meshC8 );
+  scene.add( meshCs );
+  scene.add( meshDs );
+  scene.add( meshFs );
+  scene.add( meshGs);
+  scene.add( meshAs );
+  render();
 },1000/60);
-
-scene.add( meshC );
-render();
-
-scene.add( meshD );
-render();
-
-scene.add( meshE );
-render();
-
-scene.add( meshF );
-render();
-
-scene.add( meshG );
-render();
-
-scene.add( meshA );
-render();
-
-scene.add( meshB );
-render();
-
-scene.add( meshC8 );
-render();
-
-scene.add( meshCs );
-render();
-
-scene.add( meshDs );
-render();
-
-scene.add( meshFs );
-render();
-
-scene.add( meshGs);
-render();
-
-scene.add( meshAs );
-render();
-
-
-
-
-
-
 };
  
 window.addEventListener( 'DOMContentLoaded', main, false );
