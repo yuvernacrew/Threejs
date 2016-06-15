@@ -153,7 +153,6 @@ var c,d,e,f,g,a,b,c8,cs,ds,fs,gs,as;
   gs = new Audio('audio/piano/Gs.mp3');
   as = new Audio('audio/piano/As.mp3');
 
-  btn_piano.classList.add('selected');
 
 
 btn_piano.addEventListener('click',function(){
