@@ -1,35 +1,26 @@
-
-
-  var sound , piano , bass , synthe , chaos ,  fun , mario , animal , geino;
-  //ボタン操作
-  function btn(bt){
-    if(bt==piano){
-      sound = 'piano';
-      console.log(sound);
-    }else if(bt==bass){
-      sound = 'bass';
-      console.log(sound);
-    }else if(bt==synthe){
-      sound = 'synthe';
-      console.log(sound);
-    }else if(bt==chaos){
-      sound = 'chaos';
-      console.log(sound);
-    }else if(bt==fun){
-      sound = 'fun';
-      console.log(sound);
-    }else if(bt==mario){
-      sound = 'mario';
-      console.log(sound);
-    }else if(bt==animal){
-      sound = 'animal';
-      console.log(sound);
-    }else if(bt==geino){
-      sound = 'geino';
-      console.log(sound);
-    }else{
-      sound = 'piano';
+$(function(){
+var sound1;
+    if($('#btn_piano').click()){
+      sound1 = 'piano';
+      console.log(sound1);
+    }else if($('#btn_piano').click()){
+      sound1 = 'bass';
+      console.log(sound1);
+    }else if($('#btn_bass').click()){
+      sound1 = 'synthe';
+      console.log(sound1);
+    }else if($('#btn_synthe').click()){
+      sound1 = 'chaos';
+      console.log(sound1);
+    }else if($('#btn_synthebass').click()){
+      sound1 = 'fun';
+      console.log(sound1);
+    }else if($('#btn_chaos').click()){
+      sound1 = 'mario';
+      console.log(sound1);
+    }else if($('#btn_bell').click()){
+      sound1 = 'animal';
+      console.log(sound1);
     }
-  }
+});
 
-  console.log(sound);

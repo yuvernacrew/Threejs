@@ -7,12 +7,16 @@ body{
 	/*background-image: url('../images/cosmos.jpg');*/
 	background-color: black;
 	font-family: 'Code Light';
+	overflow: hidden;
 }
 /*
 *{
 	box-sizing:border-box;
 }*/
 
+.hid{
+	display: none;
+}
 
 header{
 	width:100%;
@@ -24,7 +28,7 @@ header{
 header h1{
 	color:white;
 	width:100%;
-	font-size:50px;
+	font-size:5vw;
 	text-align: center;
 	line-height: 50px;
 	margin:0 auto;
@@ -89,7 +93,7 @@ main{
 }
 
 main canvas{
-	width:70%;
+	width:70vw;
 	height: auto;
 	display:block;
 	margin:0 auto;
@@ -104,7 +108,7 @@ footer{
 
 .kenban{
 	position: relative;
-	width: 720px;
+	width: 56vw;
 	height: auto;
 	margin: 0 auto;
 }
@@ -117,7 +121,7 @@ footer{
 	position: absolute;
 	background-color: black;
 	top:0px;
-	left:50px;
+	left:4.5vw;
 	z-index:10;
 }
 
@@ -125,13 +129,13 @@ footer{
 	position: absolute;
 	background-color: black;
 	top:0px;
-	left:320px;
+	left:32.5vw;
 	z-index: 10;
 }
 
 .btn{
-	height: 200px;
-	width: 90px;
+	height: 30vh;
+	width: 7vw;
 	box-sizing: border-box;
 	border: 1px solid white;
 	float: left;
@@ -150,8 +154,8 @@ footer{
 }
 
 .btn2{
-	height: 120px;
-	width: 60px;
+	height: 18vh;
+	width: 5vw;
 	border: 1px solid white;
 	box-sizing: border-box;
 	float: left;
@@ -163,29 +167,14 @@ footer{
 	font-size:24px;
 }
 
-#Cs{
+#Ds,#Gs{
 	position: absolute;
-	left:10px;
-}
-
-#Ds{
-	position: absolute;
-	left:100px;
-}
-
-#Fs{
-	position: absolute;
-	left:10px;
-}
-
-#Gs{
-	position: absolute;
-	left:100px;
+	left:7vw;
 }
 
 #As{
 	position: absolute;
-	left:190px;
+	left:14vw;
 }
 
 .pushed{
@@ -197,4 +186,21 @@ footer{
 	background-color:white;
 }
 
+@media (max-width: 978px) {
+  main{
+  	visibility:hidden;
+  }
 
+  .hid{
+  	width: 28vw;
+  	height: 100vh;
+  	text-align: center;
+  	color:white;
+  	display: block;
+  	position: absolute;
+  	top:40vh;
+  	left:36vw;
+  }
+
+
+}

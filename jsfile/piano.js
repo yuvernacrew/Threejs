@@ -1,10 +1,13 @@
 var main = function () {
   var scene = new THREE.Scene();
 
+  var W = document.body.clientWidth;
+  var H = document.documentElement.clientHeight;
+
   //カメラゾーン
  
-  var width  = 880;
-  var height = 480;
+  var width  = W *0.9;
+  var height = H * 0.7;
   var fov    =　5000;
   var aspect = width / height;
   var near   = 1;

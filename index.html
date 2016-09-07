@@ -6,8 +6,9 @@
       <link rel="stylesheet" type="text/css" href="css/reset.css">
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="stylesheet" type="text/css" href="css/clearfix.css">
+      <script src="jsfile/jquery-3.1.0.min.js"></script>
       <script src="jsfile/three.min.js"></script>
-<!--       <script src="jsfile/btn.js"></script> -->
+      <script src="jsfile/btn.js"></script>
   </head>
   <body>
   <header class="header">
@@ -17,6 +18,10 @@
   <main>
     <div id="piano"></div>
   </main>
+
+  <div class="hid">
+      画面を大きくしてご利用ください。
+  </div>
 
   <nav class="nav">
     <div class="nav-btn" id="btn_piano"><img src="images/piano.png" alt="ピアノ"></div>
@@ -37,7 +42,7 @@
 
   <footer>
     <div class="kenban clearfix"> 
-      <div class="white-btn">
+      <div class="white-btn clearfix">
         <div id="C" class="btn">a</div>
         <div id="D" class="btn">s</div>
         <div id="E" class="btn">d</div>
@@ -48,7 +53,7 @@
         <div id="C8" class="btn">k</div>
       </div>
 
-      <div class="black-btn1">
+      <div class="black-btn1 clearfix">
         <div id="Cs" class="btn2">w</div>
         <div id="Ds" class="btn2">e</div>
       </div>
