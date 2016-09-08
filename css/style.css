@@ -92,15 +92,9 @@ main{
 	background-color: #808080;
 }
 
-main canvas{
-	width:70vw;
-	height: auto;
-	display:block;
-	margin:0 auto;
-}
 
 footer{
-	width:100%;
+	width:100vw;
 	height:auto;
 	position: relative;
 	float: left;
@@ -129,12 +123,12 @@ footer{
 	position: absolute;
 	background-color: black;
 	top:0px;
-	left:32.5vw;
+	left:25.5vw;
 	z-index: 10;
 }
 
 .btn{
-	height: 30vh;
+	height:28vh;
 	width: 7vw;
 	box-sizing: border-box;
 	border: 1px solid white;
@@ -142,7 +136,7 @@ footer{
 	color:white;
 	font-size: 30px;
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 21vh;
 }
 
 .btn:nth-child(1){
@@ -154,7 +148,7 @@ footer{
 }
 
 .btn2{
-	height: 18vh;
+	height: 16vh;
 	width: 5vw;
 	border: 1px solid white;
 	box-sizing: border-box;
@@ -163,7 +157,7 @@ footer{
 	background-color: black;
 	color:white;
 	text-align: center;
-	padding-top:80px;
+	padding-top:10vh;
 	font-size:24px;
 }
 
@@ -182,15 +176,20 @@ footer{
 	color:black;
 }
 
-.selected{
-	background-color:white;
+#btn_piano{
+	background-color: #808080;
 }
 
-@media (max-width: 978px) {
+main canvas{
+	width:70vw;
+	height: auto;
+	display:block;
+	margin:0 auto;
+}
+@media screen and (max-width: 978px) {
   main{
   	visibility:hidden;
   }
-
   .hid{
   	width: 28vw;
   	height: 100vh;
@@ -201,6 +200,11 @@ footer{
   	top:40vh;
   	left:36vw;
   }
-
-
 }
+
+@media screen and (max-width: 630px) {
+  body{
+  	display:none;
+  }
+}
+

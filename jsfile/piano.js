@@ -145,6 +145,7 @@ var btn_piano = document.getElementById("btn_piano");
 var btn_bass = document.getElementById("btn_bass");
 var btn_synthe = document.getElementById("btn_synthe");
 var btn_chaos = document.getElementById("btn_chaos");
+var btn_guiter = document.getElementById("btn_guiter");
 var btn_fun = document.getElementById("btn_fun");
 var btn_mario = document.getElementById("btn_mario");
 var btn_animal = document.getElementById("btn_animal");
@@ -165,6 +166,19 @@ var c,d,e,f,g,a,b,c8,cs,ds,fs,gs,as;
   gs = new Audio('audio/piano/Gs.mp3');
   as = new Audio('audio/piano/As.mp3');
 
+  // c = new Audio('audio/piano/Piano_C.wav');
+  // d = new Audio('audio/piano/Piano_D.wav');
+  // e = new Audio('audio/piano/Piano_E.wav');
+  // f = new Audio('audio/piano/Piano_F.wav');
+  // g = new Audio('audio/piano/Piano_G.wav');
+  // a = new Audio('audio/piano/Piano_A.wav');
+  // b = new Audio('audio/piano/Piano_B.wav');
+  // c8 = new Audio('audio/piano/Piano_C_Oct.wav');
+  // cs = new Audio('audio/piano/Piano_C#.wav');
+  // ds = new Audio('audio/piano/Piano_D#.wav');
+  // fs = new Audio('audio/piano/Piano_F#.wav');
+  // gs = new Audio('audio/piano/Piano_G#.wav');
+  // as = new Audio('audio/piano/Piano_A#.wav');
 
 
 btn_piano.addEventListener('click',function(){
@@ -198,37 +212,56 @@ btn_bass.addEventListener('click',function(){
   gs = new Audio('audio/bass/gs_bass.mp3');
   as = new Audio('audio/bass/as_bass.mp3');
 });
+
+btn_guiter.addEventListener('click',function(){
+    //bass
+  c= new Audio('audio/guiter/Guitar_C.wav');
+  d = new Audio('audio/guiter/Guitar_D.wav');
+  e = new Audio('audio/guiter/Guitar_E.wav');
+  f = new Audio('audio/guiter/Guitar_F.wav');
+  g = new Audio('audio/guiter/Guitar_G.wav');
+  a = new Audio('audio/guiter/Guitar_A.wav');
+  b = new Audio('audio/guiter/Guitar_B.wav');
+  c8 = new Audio('audio/guiter/Guitar_C_Oct.wav');
+  cs = new Audio('audio/guiter/Guitar_Cs.wav');
+  ds = new Audio('audio/guiter/Guitar_Ds.wav');
+  fs = new Audio('audio/guiter/Guitar_Fs.wav');
+  gs = new Audio('audio/guiter/Guitar_Gs.wav');
+  as = new Audio('audio/guiter/Guitar_As.wav');
+});
+
+
 btn_synthe.addEventListener('click',function(){
     //synthe
-  c = new Audio('audio/synthe/Serum_C.wav');
-  d = new Audio('audio/synthe/Serum_D.wav');
-  e = new Audio('audio/synthe/Serum_E.wav');
-  f = new Audio('audio/synthe/Serum_F.wav');
-  g = new Audio('audio/synthe/Serum_G.wav');
-  a = new Audio('audio/synthe/Serum_A.wav');
-  b = new Audio('audio/synthe/Serum_B.wav');
-  c8 = new Audio('audio/synthe/Serum_C8.wav');
-  cs = new Audio('audio/synthe/Serum_Cs.wav');
-  ds = new Audio('audio/synthe/Serum_Ds.wav');
-  fs = new Audio('audio/synthe/Serum_Fs.wav');
-  gs = new Audio('audio/synthe/Serum_Gs.wav');
-  as = new Audio('audio/synthe/Serum_As.wav');
+  c = new Audio('audio/synthe/Lead_C.wav');
+  d = new Audio('audio/synthe/Lead_D.wav');
+  e = new Audio('audio/synthe/Lead_E.wav');
+  f = new Audio('audio/synthe/Lead_F.wav');
+  g = new Audio('audio/synthe/Lead_G.wav');
+  a = new Audio('audio/synthe/Lead_A.wav');
+  b = new Audio('audio/synthe/Lead_B.wav');
+  c8 = new Audio('audio/synthe/Lead_C_Oct.wav');
+  cs = new Audio('audio/synthe/Lead_Cs.wav');
+  ds = new Audio('audio/synthe/Lead_Ds.wav');
+  fs = new Audio('audio/synthe/Lead_Fs.wav');
+  gs = new Audio('audio/synthe/Lead_Gs.wav');
+  as = new Audio('audio/synthe/Lead_As.wav');
 });
 btn_synthebass.addEventListener('click',function(){
   //synthebass
-  c = new Audio('audio/synthebass/BASS_C.wav');
-  d = new Audio('audio/synthebass/BASS_D.wav');
-  e = new Audio('audio/synthebass/BASS_E.wav');
-  f = new Audio('audio/synthebass/BASS_F.wav');
-  g = new Audio('audio/synthebass/BASS_G.wav');
-  a = new Audio('audio/synthebass/BASS_A.wav');
-  b = new Audio('audio/synthebass/BASS_B.wav');
-  c8 = new Audio('audio/synthebass/BASS_C8.wav');
-  cs = new Audio('audio/synthebass/BASS_Cs.wav');
-  ds = new Audio('audio/synthebass/BASS_Ds.wav');
-  fs = new Audio('audio/synthebass/BASS_Fs.wav');
-  gs = new Audio('audio/synthebass/BASS_Gs.wav');
-  as = new Audio('audio/synthebass/BASS_As.wav');
+  c = new Audio('audio/synthebass/Pad_C.wav');
+  d = new Audio('audio/synthebass/Pad_D.wav');
+  e = new Audio('audio/synthebass/Pad_E.wav');
+  f = new Audio('audio/synthebass/Pad_F.wav');
+  g = new Audio('audio/synthebass/Pad_G.wav');
+  a = new Audio('audio/synthebass/Pad_A.wav');
+  b = new Audio('audio/synthebass/Pad_B.wav');
+  c8 = new Audio('audio/synthebass/Pad_C_Oct.wav');
+  cs = new Audio('audio/synthebass/Pad_Cs.wav');
+  ds = new Audio('audio/synthebass/Pad_Ds.wav');
+  fs = new Audio('audio/synthebass/Pad_Fs.wav');
+  gs = new Audio('audio/synthebass/Pad_Gs.wav');
+  as = new Audio('audio/synthebass/Pad_As.wav');
 
 });
 btn_chaos.addEventListener('click',function(){
@@ -246,22 +279,22 @@ btn_chaos.addEventListener('click',function(){
   gs = new Audio('audio/chaos/05 ARP_Gs.wav');
   as = new Audio('audio/chaos/05 ARP_As.wav');
 });
-btn_bell.addEventListener('click',function(){
-   //bell
-  c = new Audio('audio/bell/03 TRANCY BELL_C.wav');
-  d = new Audio('audio/bell/03 TRANCY BELL_D.wav');
-  e = new Audio('audio/bell/03 TRANCY BELL_E.wav');
-  f = new Audio('audio/bell/03 TRANCY BELL_F.wav');
-  g = new Audio('audio/bell/03 TRANCY BELL_G.wav');
-  a = new Audio('audio/bell/03 TRANCY BELL_A.wav');
-  b = new Audio('audio/bell/03 TRANCY BELL_B.wav');
-  c8 = new Audio('audio/bell/03 TRANCY BELL_C8.wav');
-  cs = new Audio('audio/bell/03 TRANCY BELL_Cs.wav');
-  ds = new Audio('audio/bell/03 TRANCY BELL_Ds.wav');
-  fs = new Audio('audio/bell/03 TRANCY BELL_Fs.wav');
-  gs = new Audio('audio/bell/03 TRANCY BELL_Gs.wav');
-  as = new Audio('audio/bell/03 TRANCY BELL_As.wav');
-});
+// btn_bell.addEventListener('click',function(){
+//    //bell
+//   c = new Audio('audio/bell/03 TRANCY BELL_C.wav');
+//   d = new Audio('audio/bell/03 TRANCY BELL_D.wav');
+//   e = new Audio('audio/bell/03 TRANCY BELL_E.wav');
+//   f = new Audio('audio/bell/03 TRANCY BELL_F.wav');
+//   g = new Audio('audio/bell/03 TRANCY BELL_G.wav');
+//   a = new Audio('audio/bell/03 TRANCY BELL_A.wav');
+//   b = new Audio('audio/bell/03 TRANCY BELL_B.wav');
+//   c8 = new Audio('audio/bell/03 TRANCY BELL_C8.wav');
+//   cs = new Audio('audio/bell/03 TRANCY BELL_Cs.wav');
+//   ds = new Audio('audio/bell/03 TRANCY BELL_Ds.wav');
+//   fs = new Audio('audio/bell/03 TRANCY BELL_Fs.wav');
+//   gs = new Audio('audio/bell/03 TRANCY BELL_Gs.wav');
+//   as = new Audio('audio/bell/03 TRANCY BELL_As.wav');
+// });
 btn_drum.addEventListener('click',function(){
   //drum
   c = new Audio('audio/drum/Canopy - Kick 1.wav');
