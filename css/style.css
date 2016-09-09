@@ -191,19 +191,19 @@ main canvas{
   	visibility:hidden;
   }
   .hid{
-  	width: 28vw;
+  	width: 40vw;
   	height: 100vh;
   	text-align: center;
   	color:white;
   	display: block;
   	position: absolute;
   	top:40vh;
-  	left:36vw;
+  	left:30vw;
   }
 }
 
 @media screen and (max-width: 630px) {
-  body{
+  header,footer,main,nav{
   	display:none;
   }
 }

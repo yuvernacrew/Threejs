@@ -1,4 +1,4 @@
-var main = function () {
+var main = function(){
   var scene = new THREE.Scene();
 
   var W = document.body.clientWidth;
